@@ -1,9 +1,17 @@
 language: python
+services:
+  - docker
+
 install:
   - make deps
+
 script:
   - make lint
   - make test
+  - make test_cov
+  - make docker_build
+  - make docker_push
+
 deploy:
  provider: heroku
  app: stormy-bayou-50411

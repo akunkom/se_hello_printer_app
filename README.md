@@ -57,7 +57,10 @@ o Continuous Integration, Continuous Delivery i Continuous Deployment.
 - Integracja z TravisCI:
 
   ```
-  # miejsce na twoje notatki
+  Plik .travis.yml wykonuje test dla projektu w pythonie (można specyfikować wersję)
+  Budowanie projektu: https://docs.travis-ci.com/user/languages/python
+  Logowanie na stronie https://travis-ci.org/ (dane GitHuba - projekt automatycznie wykrywany)
+
   ```
 
 # Pomocnicze
@@ -66,7 +69,16 @@ o Continuous Integration, Continuous Delivery i Continuous Deployment.
 
 - Instalacja dockera: [dockerce howto](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
 
-## Centos
+Instalacja dla Ubuntu 18.04 (root):
+```
+$ apt-get update
+$ apt-get install -qq apt-transport-https ca-certificates curl software-properties-common
+$ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -
+$ add-apt-repository 'deb [arch=amd64] https://download.docker.com/linux/ubuntu '$(lsb_release -cs)' stable'
+$ apt-get update
+$ apt-get install -qq docker-ce
+```
+### Centos
 
 - Instalacja docker-a:
 
@@ -87,3 +99,9 @@ o Continuous Integration, Continuous Delivery i Continuous Deployment.
   $ yum install -y docker-ce
   $ systemctl start docker
   ```
+
+Status in StatusCake:
+<a href="https://www.statuscake.com" title="Website Uptime Monitoring"><img src="https://app.statuscake.com/button/index.php?Track=hJ3BmgNeFM&Days=1&Design=2" /></a>
+
+Status in Travis:
+[![Build Status](https://www.travis-ci.org/akunkom/se_hello_printer_app.svg?branch=master)](https://www.travis-ci.org/akunkom/se_hello_printer_app)
