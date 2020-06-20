@@ -6,5 +6,5 @@ script:
   - make test
 deploy:
  provider: heroku
- app: NAZWA TWOJEJ APLIKACJI
+ app: stormy-bayou-50411
  api_key: ${HEROKU_API_KEY}
