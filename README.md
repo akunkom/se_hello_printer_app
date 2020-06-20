@@ -38,18 +38,18 @@ o Continuous Integration, Continuous Delivery i Continuous Deployment.
   ```
   $ PYTHONPATH=. py.test
   $ PYTHONPATH=. py.test --verbose -s
+
+  (verbose określa poziom szczegółowości odpowiedzi)
   ```
 
-- Kontynuując pracę z projektem, aktywowanie hermetycznego środowiska dla aplikacji py:
+- Aktywowanie hermetycznego środowiska dla aplikacji py:
 
   ```
   # deaktywacja
   $ deactivate
   ```
-
   ```
   ...
-
   # aktywacja
   $ source .venv/bin/activate
   ```
@@ -62,6 +62,21 @@ o Continuous Integration, Continuous Delivery i Continuous Deployment.
   Logowanie na stronie https://travis-ci.org/ (dane GitHuba - projekt automatycznie wykrywany)
 
   ```
+
+- Docker
+  ```
+  Komendy Dockera uruchamia się jako root:
+  $ sudo su
+  ...
+  $ exit
+
+  Ustawienie hasła w Settings TravisCI.
+  ```
+
+- Heroku  
+    ```
+    https://devcenter.heroku.com/articles/python-gunicorn
+    ```
 
 # Pomocnicze
 
@@ -87,9 +102,7 @@ $ apt-get install -qq docker-ce
         docker-common \
         container-selinux \
         docker-selinux \
-        docker-engine
-
-  $ yum install -y yum-utils
+        dnstall -y yum-utils
 
   $ yum-config-manager \
       --add-repo \
@@ -100,8 +113,9 @@ $ apt-get install -qq docker-ce
   $ systemctl start docker
   ```
 
-Status in StatusCake:
-<a href="https://www.statuscake.com" title="Website Uptime Monitoring"><img src="https://app.statuscake.com/button/index.php?Track=hJ3BmgNeFM&Days=1&Design=2" /></a>
 
-Status in Travis:
-[![Build Status](https://www.travis-ci.org/akunkom/se_hello_printer_app.svg?branch=master)](https://www.travis-ci.org/akunkom/se_hello_printer_app)
+  Status in Travis:
+[![Build Status](https://travis-ci.org/akunkom/se_hello_printer_app.svg?branch=master)](https://travis-ci.org/akunkom/se_hello_printer_app)
+
+ Status in StatusCake (Website Monitoring Reporting):
+<a href="https://www.statuscake.com" title="Website Uptime Monitoring"><img src="https://app.statuscake.com/button/index.php?Track=hJ3BmgNeFM&Days=1&Design=2" /></a>
