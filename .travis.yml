@@ -4,8 +4,8 @@ services:
 
 install:
   - make deps
-#  - pip install --upgrade pytest
-#  - pip install -r test_requirements.txt
+  - pip install --upgrade pytest
+  - pip install -r test_requirements.txt
 
 script:
   - make lint
