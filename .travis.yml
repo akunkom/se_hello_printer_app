@@ -4,3 +4,7 @@ install:
 script:
   - make lint
   - make test
+deploy:
+ provider: heroku
+ app: NAZWA TWOJEJ APLIKACJI
+ api_key: ${HEROKU_API_KEY}
