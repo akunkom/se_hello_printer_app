@@ -3,14 +3,6 @@ pipeline {
     stages {
         stage('Deps') {
             steps {
-                    sh 'make deps'
-            }
-        }
-        pipeline {
-    agent any
-    stages {
-        stage('Deps') {
-            steps {
                 sh 'make deps'
             }
         }
@@ -27,6 +19,12 @@ pipeline {
                             skipNoTestFiles: false,
                             stopProcessingIfError: true)
                   ]
-               }
-          }
+             }
+        }
+        stage('Lint') {
+            steps {
+              sh 'make lint'
+            }
+        }
+    }
 }
