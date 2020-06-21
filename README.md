@@ -76,6 +76,9 @@ o Continuous Integration, Continuous Delivery i Continuous Deployment.
 - Heroku  
     ```
     https://devcenter.heroku.com/articles/python-gunicorn
+
+    Pierwsze hasło generowane dla Heroku - sprawdzenie:
+    $ heroku auth:token
     ```
 
 # Pomocnicze
